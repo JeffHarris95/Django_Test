@@ -1,0 +1,43 @@
+#wrapper {
+    width: 600px;
+    height: 250px;
+    margin: 20px auto;
+    border: black solid 2px;
+    padding-top: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 50%;
+    margin: 10px 0px 0px 15px;
+}
+
+textarea {
+    margin: 10px 0px 0px 15px;
+    width: 564px;
+    height: 50px;
+}
+
+button {
+    margin: 25px 15px 0px 0px;
+    float: right;
+}
+
+h1 {
+    margin-left: 15px;
+    text-decoration: underline;
+}
+
+h2 {
+    margin: 10px 0px 0px 25px;
+    display: inline-block;
+    width: 50%;
+}
+
+p {
+    display: inline-block;
+}
+
+#back {
+    margin-top: 90px;
+}
