@@ -1,0 +1,69 @@
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+.wrapper {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    width: 500px;
+}
+
+.wrapper_left {
+    display: inline-block;
+    width: 380px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.wrapper_right {
+    display: inline-block;
+    width: 380px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.grid {
+    display: inline-grid;
+    grid-template-columns: 100px 200px;
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.btn {
+    grid-column: 1 / span 2;
+}
+
+li {
+    color: red;
+}
+
+p {
+    color: green;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 2em;
+}
+
+.book {
+    margin-top: 30px;
+    font-size: 2em;
+    border-top: solid 1px black;
+    display: block;
+}
+
+a {
+    display: block;
+}
+
+form {
+    margin-top: 30px;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+}

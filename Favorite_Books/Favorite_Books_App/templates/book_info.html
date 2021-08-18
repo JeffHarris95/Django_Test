@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <title>Shows</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Welcome,  {{ user.first_name }}</h1>
+
+            <a href="/logout">Log Out</a>
+
+            <h2>{{ book.title }}</h2>
+            <p>Added by {{ book.uploaded_by.first_name }}</p>
+            <p>Added on: {{ book.created_at }}</p>
+            <p>Last Updated on: {{ book.updated_at }}</p>
+            <p>Description: {{ book.description }}</p>
+
+            <h2>Users Who Like This Book</h2>
+            {% for user in all_users %}
+                {% if user in book.users_who_like.all %}
+                    <p>{{ user.first_name }}</p>
+                {% endif %}
+            {% endfor %}
+
+            {% if user in book.users_who_like.all %}
+                <a href="/books/{{ book.id }}/unfavorite_book" class="book">Un-Favorite</a>
+            {% else %}
+                <a href="/books/{{ book.id }}/favorite_book" class="book">Add to Favorites</a>
+            {% endif %}
+
+        </div>
+    </body>
+</html>
